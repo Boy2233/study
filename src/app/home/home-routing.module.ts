@@ -6,6 +6,7 @@ const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
+
     children: [
       {
         path: 'new',
@@ -13,14 +14,31 @@ const routes: Routes = [
       },
 
       {
-        path: 'newone',
+        path: 'new-one',
         loadChildren: () => import('./pages/new-one/new-one.module').then(m => m.NewOneModule)
       },
 
       {
-        path: 'newtwo',
+        path: 'new-two',
         loadChildren: () => import('./pages/new-two/new-two.module').then(m => m.NewTwoModule)
       },
+
+      {
+        path: 'new-three',
+        loadChildren: () => import('./pages/new-three/new-three.module').then(m => m.NewThreeModule)
+      },
+
+      {
+        path: 'new-four',
+        loadChildren: () => import('./pages/new-four/new-four.module').then(m => m.NewFourModule)
+      },
+
+      {
+        path: 'new-five',
+        loadChildren: () => import('./pages/new-five/new-five.module').then(m => m.NewFiveModule)
+      }
+
+
     ]
   }
 ];
